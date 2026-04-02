@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Extrema with Constraint: Lagrang Multiplier
 ---
 
 Tags: #Analysis #Examples 
@@ -131,8 +132,10 @@ $$
 Substituting this into the constraint, we obtain $\lambda = 2$. Thus the function $f(x,y,z)$ has an extremum $$f_{max} = \lambda^2 - \frac{\lambda^2}{4} = 3$$ It is a local maximum because the quadratic form
 
 $$
-(\partial_{x_i}\partial_{x_j}\mathcal{L}(x_0)) \, \xi_i \,\xi_j
-$$ is negative-definite.
+(\partial_{x_i}\partial_{x_j}\mathcal{L}(x_0)) \xi_i \,\xi_j
+$$ 
+
+is negative-definite.
  
  
 
