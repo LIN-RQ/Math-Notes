@@ -6,7 +6,8 @@ title: Extrema with Constraint - Lagrange Multiplier
 Tags: #Analysis #Examples 
 
 > **Note**
-> Here we are going to illustrate how to solve an optimization problem by Lagrange multiplier with some examples.
+>
+> We are going to illustrate how to solve an optimization problem by Lagrange multiplier with some examples.
 
 ---
 > **Example 1** 
