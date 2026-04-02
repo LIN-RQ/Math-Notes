@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Extrema with Constraint - Lagrange Multiplier
 ---
 
 Tags: #Analysis #Examples 
