@@ -83,7 +83,10 @@ $$
 Therefore, we have $x = \dfrac{3}{2} = \lambda$ , $y=3$, and $f_{min} = \dfrac{45}{4}$ 
 
 > **Example 4** 
-> Suppose we are given the function $$f(x,y,z) = x^2 - y^2 + z^2$$ in the space $\mathbb{R}^3$ with coordinates $x, y, z$. We seek an extremum of this function on the plane $S$ defined by the equation
+> Suppose we are given the function
+> $$
+> f(x,y,z) = x^2 - y^2 + z^2
+> $$ in the space $\mathbb{R}^3$ with coordinates $x, y, z$. We seek an extremum of this function on the plane $S$ defined by the equation
 > $$
 > F(x,y,z) = 2x-y-3 = 0.
 > $$ 
