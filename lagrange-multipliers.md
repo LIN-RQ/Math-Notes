@@ -10,7 +10,11 @@ Tags: #Analysis #Examples
 ---
 > **Example 1** 
 > Find the maximum and minimum values of $f$ subject to the given constraint, if such values exist.
-> $$\begin{cases} & f(x,y) = x+y \\ &x^2 + y^2 = 1 \end{cases}$$
+> $$
+> \begin{cases}
+> & f(x,y) = x+y \\
+> & x^2 + y^2 = 1 \end{cases}
+> $$
 
 Let the Lagrangian be 
 $$
