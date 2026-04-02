@@ -31,6 +31,7 @@ $$
  \partial_y \mathcal{L} & = 1 + 2 \lambda y 
  \end{aligned} 
  $$ 
+ 
 To each the extrema, we must have $\dfrac{\partial \mathcal{L}}{\partial x} = 0$ and $\dfrac{\partial \mathcal{L}}{\partial y} = 0$. Thus 
 
  $$
