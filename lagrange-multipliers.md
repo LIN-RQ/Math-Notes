@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 Tags: #Analysis #Examples 
 
 > **Note**
