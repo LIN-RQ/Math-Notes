@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Extrema with Constraint: Lagrang Multiplier
 ---
 
 Tags: #Analysis #Examples 
@@ -24,6 +23,7 @@ Let the Lagrangian be
 $$
 \mathcal{L}(x,y) = f(x,y) + \lambda(x^2+y^2)
 $$ 
+
 then 
 
 $$
@@ -32,6 +32,7 @@ $$
  \end{aligned} 
  $$ 
 To each the extrema, we must have $\dfrac{\partial \mathcal{L}}{\partial x} = 0$ and $\dfrac{\partial \mathcal{L}}{\partial y} = 0$. Thus 
+
  $$
  x= y = -\frac{1}{2\lambda}$$ Substituting it into the constraint, we get $$x = y = \pm \frac{1}{\sqrt{2}} 
  $$ 
@@ -61,11 +62,20 @@ then
 
 $$ \partial_x \mathcal{L} = x(2-2\lambda),\quad \partial_y \mathcal{L} = y(4-2\lambda) $$ 
 
-If the partial derivatives of $\mathcal{L}$ are zero, then we have different possible combinations of $(x,y,\lambda)$: $$(0,\pm \, 2,2), \quad (\pm \, 2,0,1), \quad(0,0,\lambda \in \mathbb{R})$$
-They correspond to different values of $f(x,y)$: $$f_1 = f_{max} = 8, \quad f_2 = 4,\quad f_3= f_{min}=0$$
+If the partial derivatives of $\mathcal{L}$ are zero, then we have different possible combinations of $(x,y,\lambda)$: 
+
+$$(0,\pm \, 2,2), \quad (\pm \, 2,0,1), \quad(0,0,\lambda \in \mathbb{R})$$
+
+They correspond to different values of $f(x,y)$: 
+
+$$f_1 = f_{max} = 8, \quad f_2 = 4,\quad f_3= f_{min}=0$$
 
 > **Example 3**
-> For each value of $\lambda$ the function $$f(x,y) = x^2 + y^2 - \lambda (2x+4y-15)$$ has a minimum value $m(\lambda)$.
+> For each value of $\lambda$ the function
+>
+> $$f(x,y) = x^2 + y^2 - \lambda (2x+4y-15)$$
+>
+> has a minimum value $m(\lambda)$.
 >- (a) Find $m(\lambda)$.
 >- (b) For which value of $\lambda$ is $m(\lambda)$ the largest and what is that maximum value ?
 >- (c) Find the minimum value of $f(x,y) = x^2 + y^2$ subject to the constraint $2x+4y = 15$ using the method of Lagrange multiplier and evaluate $\lambda$.
@@ -79,11 +89,13 @@ $$
 $$
 
 $\partial_x f = \partial_y f = 0$ implies that $x= \lambda$ and $y = 2\lambda$. If we substitute them into $f(x,y)$, we will obtain 
+
 $$
 m(\lambda) = \lambda^2 + 4\lambda^2 - \lambda(2\lambda + 8\lambda -15) = -5\lambda^2 - 15 \lambda
 $$
 
 The derivative of $m(\lambda)$ is 
+
 $$
 m'(\lambda) = -10\lambda-15
 $$ 
@@ -93,6 +105,7 @@ and $\lambda = -\dfrac{3}{2} \implies m'(\lambda) = 0$. The maximum value is
 $$m(-\frac{3}{2}) = -\frac{45}{4} + \frac{45}{2} =\frac{45}{4}$$
 
 In order to find the minimum value, the value of $\lambda$ is different from zero, and we have 
+
 $$
 \frac{x}{y}=\frac{\lambda}{2\lambda} = \frac{1}{2} \implies 2x = y
 $$ 
@@ -107,9 +120,13 @@ Therefore, we have $x = \dfrac{3}{2} = \lambda$ , $y=3$, and $f_{min} = \dfrac{4
 
 > **Example 4** 
 > Suppose we are given the function
+> 
 > $$
 > f(x,y,z) = x^2 - y^2 + z^2
-> $$ in the space $\mathbb{R}^3$ with coordinates $x, y, z$. We seek an extremum of this function on the plane $S$ defined by the equation
+> $$
+>
+> in the space $\mathbb{R}^3$ with coordinates $x, y, z$. We seek an extremum of this function on the plane $S$ defined by the equation
+> 
 > $$
 > F(x,y,z) = 2x-y-3 = 0.
 > $$ 
@@ -132,7 +149,7 @@ $$
 Substituting this into the constraint, we obtain $\lambda = 2$. Thus the function $f(x,y,z)$ has an extremum $$f_{max} = \lambda^2 - \frac{\lambda^2}{4} = 3$$ It is a local maximum because the quadratic form
 
 $$
-(\partial_{x_i}\partial_{x_j}\mathcal{L}(x_0)) \xi_i \,\xi_j
+(\partial_{x_i}\partial_{x_j}\mathcal{L}(x_0)) \xi_i \xi_j
 $$ 
 
 is negative-definite.
