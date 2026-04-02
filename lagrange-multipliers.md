@@ -1,9 +1,3 @@
----
-layout: default
-title: Lagrange Multiplier
----
-
-
 Tags: #Analysis #Examples 
 
 > **Note**
