@@ -34,7 +34,8 @@ To each the extrema, we must have $\dfrac{\partial \mathcal{L}}{\partial x} = 0$
  Hence,
  
  $$f_{max} = \dfrac{2}{\sqrt{2}}, \quad f_{min} = -\dfrac{2}{\sqrt{2}}$$
- 
+
+---
  
 >  **Example 2**
 > Find the maximum and minimum values of $f$ subject to the given constraint, if such values exist.
@@ -59,6 +60,8 @@ $$(0,\pm \, 2,2), \quad (\pm \, 2,0,1), \quad(0,0,\lambda \in \mathbb{R})$$
 They correspond to different values of $f(x,y)$: 
 
 $$f_1 = f_{max} = 8, \quad f_2 = 4,\quad f_3= f_{min}=0$$
+
+---
 
 > **Example 3**
 > For each value of $\lambda$ the function
@@ -96,6 +99,8 @@ Substituting this relation into the constraint, we get
 $$2x + 4y = 10x = 15$$ 
 
 Therefore, we have $x = \dfrac{3}{2} = \lambda$ , $y=3$, and $f_{min} = \dfrac{45}{4}$ 
+
+---
 
 > **Example 4** 
 > Suppose we are given the function
