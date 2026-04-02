@@ -44,7 +44,13 @@ To each the extrema, we must have $\dfrac{\partial \mathcal{L}}{\partial x} = 0$
  
 >  **Example 2**
 > Find the maximum and minimum values of $f$ subject to the given constraint, if such values exist.
-> $$\begin{aligned}  f(x,y) &= x^2+2y^2 \\  x^2 + y^2  &\le 4 \end{aligned} $$
+> 
+> $$
+> \begin{aligned}
+>  f(x,y) &= x^2+2y^2 \\
+> x^2 + y^2  &\le 4
+> \end{aligned}
+> $$
 
 The Lagrangian is  
 
