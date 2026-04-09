@@ -82,15 +82,15 @@ $$\begin{split} & \partial_x f = 2x - 2\lambda \\
 
 $\partial_x f = \partial_y f = 0$ implies that $x= \lambda$ and $y = 2\lambda$. If we substitute them into $f(x,y)$, we will obtain 
 
-$$m(\lambda) = \lambda^2 + 4\lambda^2 - \lambda(2\lambda + 8\lambda -15) = -5\lambda^2 - 15 \lambda$$
+$$m(\lambda) = \lambda^2 + 4\lambda^2 - \lambda(2\lambda + 8\lambda -15) = -5\lambda^2 + 15 \lambda$$
 
 The derivative of $m(\lambda)$ is 
 
-$$m'(\lambda) = -10\lambda-15$$ 
+$$m'(\lambda) = -10\lambda + 15$$ 
 
-and $\lambda = -\dfrac{3}{2} \implies m'(\lambda) = 0$. The maximum value is 
+and $m'(\lambda) = 0 \implies \lambda = \dfrac{3}{2} $. The maximum value is 
 
-$$m(-\frac{3}{2}) = -\frac{45}{4} + \frac{45}{2} =\frac{45}{4}$$
+$$m(\frac{3}{2}) = -\frac{45}{4} + \frac{45}{2} =\frac{45}{4}$$
 
 In order to find the minimum value, the value of $\lambda$ is different from zero, and we have 
 
