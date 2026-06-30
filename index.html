@@ -8,187 +8,217 @@
 
   <style>
     :root {
-      --background: #f7f8fa;
+      --background: #f6f7f9;
       --surface: #ffffff;
-      --text: #1f2933;
-      --muted: #667085;
-      --border: #d9dee7;
-      --accent: #1d4ed8;
-      --accent-dark: #163c9c;
-      --code-bg: #eef2f7;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #dbe1e8;
+      --navy: #172033;
+      --blue: #1d4ed8;
+      --blue-dark: #153a9a;
+      --tag-background: #eaf0ff;
+      --tag-text: #244a9f;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
       background: var(--background);
       color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
       line-height: 1.65;
     }
 
     a {
-      color: var(--accent);
+      color: var(--blue);
       text-decoration: none;
     }
 
     a:hover {
-      color: var(--accent-dark);
+      color: var(--blue-dark);
       text-decoration: underline;
     }
 
     header {
-      background: #172033;
+      background: var(--navy);
       color: white;
-      padding: 4rem 1.5rem 3.5rem;
+      padding: 4rem 1.5rem 3.2rem;
     }
 
-    .header-content,
-    main,
-    footer {
-      max-width: 980px;
+    .container {
+      width: min(1040px, calc(100% - 3rem));
       margin: 0 auto;
     }
 
     header h1 {
       margin: 0;
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(2rem, 5vw, 3.3rem);
       letter-spacing: -0.02em;
     }
 
     header p {
-      max-width: 720px;
+      max-width: 790px;
       margin: 1rem 0 0;
-      color: #d7deea;
-      font-size: 1.1rem;
+      color: #d6deea;
+      font-size: 1.08rem;
     }
 
     nav {
-      margin-top: 1.8rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
+      margin-top: 1.7rem;
+      font-family: Arial, sans-serif;
     }
 
     nav a {
       color: white;
-      border: 1px solid #64748b;
+      border: 1px solid #66758d;
       border-radius: 999px;
-      padding: 0.35rem 0.85rem;
-      font-family: Arial, sans-serif;
+      padding: 0.38rem 0.85rem;
       font-size: 0.9rem;
     }
 
     nav a:hover {
       background: white;
-      color: #172033;
+      color: var(--navy);
       text-decoration: none;
     }
 
     main {
-      padding: 3rem 1.5rem 4rem;
+      padding: 3rem 0 4rem;
     }
 
     section {
-      margin-bottom: 3.5rem;
+      margin-bottom: 3.4rem;
     }
 
     h2 {
-      margin-bottom: 0.8rem;
-      font-size: 1.8rem;
-      border-bottom: 2px solid var(--border);
+      margin: 0 0 0.8rem;
       padding-bottom: 0.45rem;
+      border-bottom: 2px solid var(--border);
+      font-size: 1.9rem;
     }
 
     h3 {
-      margin-top: 0;
-      margin-bottom: 0.55rem;
-      font-size: 1.2rem;
+      margin: 2.1rem 0 0.45rem;
+      font-size: 1.25rem;
     }
 
-    .intro {
+    .lead {
+      max-width: 860px;
+      margin: 0;
       font-size: 1.05rem;
-      max-width: 800px;
     }
 
-    .note-grid {
+    .notice {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      background: #eef4ff;
+      color: #334155;
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1.4rem;
+      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+      gap: 1.15rem;
+      margin-top: 1rem;
     }
 
-    .note-card {
-      background: var(--surface);
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      padding: 1.25rem;
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.3rem;
-      box-shadow: 0 2px 8px rgba(20, 30, 50, 0.04);
+      border-radius: 11px;
+      background: var(--surface);
+      box-shadow: 0 2px 9px rgba(15, 23, 42, 0.045);
     }
 
-    .note-card p {
+    .card h4 {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0.7rem 0 1rem;
       color: var(--muted);
-      margin: 0.5rem 0 1rem;
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
-    .note-links {
+    .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: var(--tag-background);
+      color: var(--tag-text);
+      font-family: Arial, sans-serif;
+      font-size: 0.76rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: auto;
       font-family: Arial, sans-serif;
       font-size: 0.9rem;
     }
 
-    .button-link {
+    .button {
       display: inline-block;
-      background: var(--accent);
-      color: white;
-      border-radius: 6px;
       padding: 0.48rem 0.8rem;
+      border-radius: 6px;
+      background: var(--blue);
+      color: white;
     }
 
-    .button-link:hover {
-      background: var(--accent-dark);
+    .button:hover {
+      background: var(--blue-dark);
       color: white;
       text-decoration: none;
     }
 
-    .metadata {
+    .small {
       color: var(--muted);
       font-family: Arial, sans-serif;
       font-size: 0.86rem;
     }
 
-    .project-list {
-      background: var(--surface);
-      border-left: 4px solid var(--accent);
-      padding: 1rem 1.2rem;
-      border-radius: 0 8px 8px 0;
-    }
-
-    code {
-      background: var(--code-bg);
-      border-radius: 4px;
-      padding: 0.15rem 0.35rem;
-      font-family: "Courier New", monospace;
-      font-size: 0.9em;
-    }
-
     footer {
+      padding: 1.6rem 0 2.5rem;
       border-top: 1px solid var(--border);
-      padding: 1.8rem 1.5rem 2.5rem;
       color: var(--muted);
       font-family: Arial, sans-serif;
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 2rem, 1040px);
+      }
+
       header {
-        padding-top: 2.8rem;
+        padding: 2.8rem 0 2.4rem;
       }
 
       main {
@@ -201,162 +231,211 @@
 <body>
 
   <header>
-    <div class="header-content">
+    <div class="container">
       <h1>Mathematical Physics Notes</h1>
 
       <p>
-        Personal notes on numerical analysis, fluid mechanics,
-        PDEs, variational methods, and scientific computing.
+        Personal notes on computational fluid dynamics,
+        PDE-constrained optimisation, adjoint methods,
+        streamfunction-vorticity formulations, and numerical analysis.
       </p>
 
       <nav>
-        <a href="#notes">Notes</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="https://github.com/RLIN175" target="_blank" rel="noopener">
-          GitHub
-        </a>
+        <a href="#cfd">Computational Fluid Dynamics</a>
+        <a href="#research-notes">Research Notes</a>
+        <a href="#literature-notes">Literature Notes</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main class="container">
 
-    <section id="about">
-      <h2>About</h2>
+    <section id="cfd">
+      <h2>Computational Fluid Dynamics</h2>
 
-      <p class="intro">
-        This website collects selected mathematical and numerical notes.
-        The material focuses on partial differential equations, fluid
-        mechanics, streamfunction-vorticity formulations, adjoint methods,
-        and numerical schemes for steady-state problems.
+      <p class="lead">
+        This collection contains derivations, numerical-method notes,
+        and reading notes related to incompressible flow,
+        streamfunction-vorticity formulations, adjoint methods,
+        and vorticity boundary conditions.
       </p>
 
-      <p class="intro">
-        The notes are intended as working documents: they may be revised,
-        expanded, or reorganized as the underlying research progresses.
-      </p>
-    </section>
-
-    <section id="notes">
-      <h2>Notes</h2>
-
-      <div class="note-grid">
-
-        <article class="note-card">
-          <h3>Steady Navier–Stokes Equation</h3>
-
-          <p>
-            Notes on the numerical resolution of the steady
-            two-dimensional Navier–Stokes equations in
-            streamfunction-vorticity formulation.
-          </p>
-
-          <div class="note-links">
-            <!-- Replace the path below with your real PDF path -->
-            <a class="button-link"
-               href="Math-Physics-Notes/numerical-methods/steady-navier-stokes-scheme.pdf"
-               target="_blank">
-              Read PDF
-            </a>
-
-            <a href="Math-Physics-Notes/numerical-methods/steady-navier-stokes-scheme.pdf"
-               download>
-              Download
-            </a>
-          </div>
-        </article>
-
-        <article class="note-card">
-          <h3>Adjoint Boundary Control</h3>
-
-          <p>
-            Variational derivation and numerical considerations for
-            adjoint-state methods applied to boundary-vorticity control.
-          </p>
-
-          <div class="note-links">
-            <!-- Replace the path below with your real PDF path -->
-            <a class="button-link"
-               href="Math-Physics-Notes/numerical-methods/adjoint-boundary-control.pdf"
-               target="_blank">
-              Read PDF
-            </a>
-
-            <a href="Math-Physics-Notes/numerical-methods/adjoint-boundary-control.pdf"
-               download>
-              Download
-            </a>
-          </div>
-        </article>
-
-        <article class="note-card">
-          <h3>Streamfunction–Vorticity Formulation</h3>
-
-          <p>
-            Mathematical notes on the streamfunction-vorticity
-            representation, boundary conditions, and compatibility issues.
-          </p>
-
-          <div class="note-links">
-            <!-- Replace the path below with your real PDF path -->
-            <a class="button-link"
-               href="Math-Physics-Notes/fluid-mechanics/streamfunction-vorticity-notes.pdf"
-               target="_blank">
-              Read PDF
-            </a>
-
-            <a href="Math-Physics-Notes/fluid-mechanics/streamfunction-vorticity-notes.pdf"
-               download>
-              Download
-            </a>
-          </div>
-        </article>
-
+      <div class="notice">
+        All PDF files below are stored in the folder
+        <code>Computational-Fluid-Dynamics</code>.
       </div>
-    </section>
 
-    <section id="projects">
-      <h2>Current Topics</h2>
+      <h3 id="research-notes">Research and Numerical-Method Notes</h3>
 
-      <div class="project-list">
-        <ul>
-          <li>Steady solutions of incompressible Navier–Stokes equations</li>
-          <li>Streamfunction-vorticity formulations in closed cavities</li>
-          <li>Adjoint-state methods and PDE-constrained optimisation</li>
-          <li>Numerical stability and convergence of iterative solvers</li>
-          <li>Reduced mathematical models for fluid mechanics</li>
-        </ul>
-      </div>
+      <div id="research-grid" class="grid"></div>
+
+      <h3 id="literature-notes">Literature and Reading Notes</h3>
+
+      <div id="literature-grid" class="grid"></div>
     </section>
 
     <section>
-      <h2>Repository Structure</h2>
+      <h2>Access and Reuse</h2>
 
-      <p>
-        The downloadable material is maintained in the associated notes
-        repository. File paths in this webpage are relative paths, for example:
+      <p class="lead">
+        These notes are working documents and may be corrected,
+        expanded, or reorganised over time. Please consult each PDF
+        for its scope, references, and current version.
       </p>
 
-      <p>
-        <code>
-          Math-Physics-Notes/numerical-methods/steady-navier-stokes-scheme.pdf
-        </code>
-      </p>
-
-      <p>
-        When you add a new PDF, place it in the appropriate folder and add a
-        corresponding card or link in this <code>index.html</code>.
+      <p class="small">
+        The PDF links are relative paths, so they work both for a
+        personal GitHub Pages website and for a repository project page.
       </p>
     </section>
 
   </main>
 
   <footer>
-    <p>
-      © 2026 RLIN175. Notes may be updated without notice.
-    </p>
+    <div class="container">
+      © 2026 RLIN175 · Mathematical Physics Notes
+    </div>
   </footer>
+
+  <script>
+    const folder = "Computational-Fluid-Dynamics";
+
+    const notes = [
+      {
+        category: "research",
+        title: "Numerical Resolution of the Steady Streamfunction-Vorticity Navier–Stokes Equation",
+        filename: "Numerical resolution of Steady State Stream Function-Vorticity Formulation-Navier Stokes Equation.pdf",
+        description: "Pseudo-time marching, frozen-velocity iteration, naive boundary-vorticity correction, and an adjoint-state formulation for steady Navier–Stokes flow.",
+        tags: ["Navier–Stokes", "Pseudo-time", "Adjoint method"]
+      },
+      {
+        category: "research",
+        title: "Adjoint Equations of PDE-Constrained Problems",
+        filename: "Adjoint Equations of PDE constrained problem.pdf",
+        description: "Calculus-of-variations derivations for one-dimensional control problems and for steady Stokes and Navier–Stokes systems in streamfunction-vorticity form.",
+        tags: ["PDE-constrained optimisation", "Variational calculus"]
+      },
+      {
+        category: "research",
+        title: "Adjoint Boundary Control for a Bi-harmonic Type System: Calculus of Variation",
+        filename: "Adjoint Boundary Control for a Bi-harmonic type of System-Calculus of Variation.pdf",
+        description: "Derivation of adjoint equations, sensitivity equations, and functional gradients for a biharmonic-type boundary-control system.",
+        tags: ["Boundary control", "Adjoint equations", "Stokes flow"]
+      },
+      {
+        category: "research",
+        title: "Adjoint Boundary Control for a Bi-harmonic Type System: Discrete Form",
+        filename: "Adjoint Boundary Control for a Bi-harmonic Type System-Discrete Form.pdf",
+        description: "A discrete optimisation formulation and iterative update strategy for boundary vorticity without assembling a large dense system.",
+        tags: ["Discrete adjoint", "Gradient descent", "Boundary vorticity"]
+      },
+      {
+        category: "research",
+        title: "Adjoint-State Method for Stokes Flow",
+        filename: "Adjoint-State Method for Stokes Flow.pdf",
+        description: "A reduced-order Stokes formulation using boundary vorticity as the control variable, together with an analysis of the underdetermined case.",
+        tags: ["Stokes flow", "Optimisation", "Vorticity"]
+      },
+      {
+        category: "research",
+        title: "Quartapelle’s Projection Condition",
+        filename: "Quartapelle's Projection Condition.pdf",
+        description: "A note on nonlocal projection conditions for vorticity and the splitting of a biharmonic problem into two Poisson equations.",
+        tags: ["Projection condition", "Harmonic functions", "Biharmonic equation"]
+      },
+      {
+        category: "research",
+        title: "Numerical Application of Quartapelle’s Projection Condition",
+        filename: "Numerical Application of Quartapelle's Projection Condition  (Time Invariant Case).pdf",
+        description: "A numerical interpretation of the time-invariant projection condition, discrete harmonic bases, and the resulting influence-matrix system.",
+        tags: ["Influence matrix", "Discrete harmonic space"]
+      },
+
+      {
+        category: "literature",
+        title: "A Review of Vorticity Conditions in the Numerical Solution",
+        filename: "Note-A review of vorticity conditions in the numerical solution.pdf",
+        description: "Reading note on local and global vorticity boundary treatments, coupled and uncoupled formulations, and their consistency properties.",
+        tags: ["Vorticity boundary conditions", "Numerical methods"]
+      },
+      {
+        category: "literature",
+        title: "Continuous and Discrete Adjoints to the Euler Equations for Fluids",
+        filename: "Note-Continuous and Discrete Adjoints to the Euler  Equations for Fluids.pdf",
+        description: "Reading note on adjoint equations for compressible Euler flows, including continuous and discrete adjoints and their behaviour near shocks.",
+        tags: ["Euler equations", "Continuous adjoint", "Discrete adjoint"]
+      },
+      {
+        category: "literature",
+        title: "Vorticity Boundary Conditions and Related Issues for Finite-Difference Schemes",
+        filename: "Note-Vorticity Boundary Condition and Related Issues for  Finite Difference Schemes.pdf",
+        description: "Reading note on local and global vorticity conditions, including Quartapelle’s projection method and Anderson’s formulation.",
+        tags: ["Finite differences", "Global constraints", "Vorticity"]
+      },
+      {
+        category: "literature",
+        title: "Progress in Edge-Plasma Turbulence Modelling",
+        filename: "Note-Progress in edge plasma turbulence modelling hierarchy of models from 2D transport application to 3D fluid simulations in realistic tokamak geometry.pdf",
+        description: "Reading note on reduced turbulence models for edge-plasma transport and 2D/3D simulations in realistic tokamak geometry.",
+        tags: ["Plasma physics", "Tokamak", "Turbulence modelling"]
+      }
+    ];
+
+    function escapeHTML(text) {
+      return text
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function createCard(note) {
+      const pdfPath = encodeURI(`${folder}/${note.filename}`);
+
+      const tags = note.tags
+        .map(tag => `<span class="tag">${escapeHTML(tag)}</span>`)
+        .join("");
+
+      return `
+        <article class="card">
+          <h4>${escapeHTML(note.title)}</h4>
+
+          <p>${escapeHTML(note.description)}</p>
+
+          <div class="tags">
+            ${tags}
+          </div>
+
+          <div class="actions">
+            <a class="button"
+               href="${pdfPath}"
+               target="_blank"
+               rel="noopener">
+              Read PDF
+            </a>
+
+            <a href="${pdfPath}" download>
+              Download
+            </a>
+          </div>
+        </article>
+      `;
+    }
+
+    const researchGrid = document.getElementById("research-grid");
+    const literatureGrid = document.getElementById("literature-grid");
+
+    researchGrid.innerHTML = notes
+      .filter(note => note.category === "research")
+      .map(createCard)
+      .join("");
+
+    literatureGrid.innerHTML = notes
+      .filter(note => note.category === "literature")
+      .map(createCard)
+      .join("");
+  </script>
 
 </body>
 </html>
