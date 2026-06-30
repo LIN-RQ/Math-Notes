@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mathematical Physics Notes</title>
+
+  <style>
+    :root {
+      --background: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1f2933;
+      --muted: #667085;
+      --border: #d9dee7;
+      --accent: #1d4ed8;
+      --accent-dark: #163c9c;
+      --code-bg: #eef2f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    header {
+      background: #172033;
+      color: white;
+      padding: 4rem 1.5rem 3.5rem;
+    }
+
+    .header-content,
+    main,
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: 1rem 0 0;
+      color: #d7deea;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      margin-top: 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      border: 1px solid #64748b;
+      border-radius: 999px;
+      padding: 0.35rem 0.85rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #172033;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.45rem;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.55rem;
+      font-size: 1.2rem;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      max-width: 800px;
+    }
+
+    .note-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.4rem;
+    }
+
+    .note-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.3rem;
+      box-shadow: 0 2px 8px rgba(20, 30, 50, 0.04);
+    }
+
+    .note-card p {
+      color: var(--muted);
+      margin: 0.5rem 0 1rem;
+      font-size: 0.96rem;
+    }
+
+    .note-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .button-link {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      padding: 0.48rem 0.8rem;
+    }
+
+    .button-link:hover {
+      background: var(--accent-dark);
+      color: white;
+      text-decoration: none;
+    }
+
+    .metadata {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.86rem;
+    }
+
+    .project-list {
+      background: var(--surface);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    code {
+      background: var(--code-bg);
+      border-radius: 4px;
+      padding: 0.15rem 0.35rem;
+      font-family: "Courier New", monospace;
+      font-size: 0.9em;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.8rem 1.5rem 2.5rem;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding-top: 2.8rem;
+      }
+
+      main {
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>Mathematical Physics Notes</h1>
+
+      <p>
+        Personal notes on numerical analysis, fluid mechanics,
+        PDEs, variational methods, and scientific computing.
+      </p>
+
+      <nav>
+        <a href="#notes">Notes</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/RLIN175" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+
+      <p class="intro">
+        This website collects selected mathematical and numerical notes.
+        The material focuses on partial differential equations, fluid
+        mechanics, streamfunction-vorticity formulations, adjoint methods,
+        and numerical schemes for steady-state problems.
+      </p>
+
+      <p class="intro">
+        The notes are intended as working documents: they may be revised,
+        expanded, or reorganized as the underlying research progresses.
+      </p>
+    </section>
+
+    <section id="notes">
+      <h2>Notes</h2>
+
+      <div class="note-grid">
+
+        <article class="note-card">
+          <h3>Steady Navier–Stokes Equation</h3>
+
+          <p>
+            Notes on the numerical resolution of the steady
+            two-dimensional Navier–Stokes equations in
+            streamfunction-vorticity formulation.
+          </p>
+
+          <div class="note-links">
+            <!-- Replace the path below with your real PDF path -->
+            <a class="button-link"
+               href="Math-Physics-Notes/numerical-methods/steady-navier-stokes-scheme.pdf"
+               target="_blank">
+              Read PDF
+            </a>
+
+            <a href="Math-Physics-Notes/numerical-methods/steady-navier-stokes-scheme.pdf"
+               download>
+              Download
+            </a>
+          </div>
+        </article>
+
+        <article class="note-card">
+          <h3>Adjoint Boundary Control</h3>
+
+          <p>
+            Variational derivation and numerical considerations for
+            adjoint-state methods applied to boundary-vorticity control.
+          </p>
+
+          <div class="note-links">
+            <!-- Replace the path below with your real PDF path -->
+            <a class="button-link"
+               href="Math-Physics-Notes/numerical-methods/adjoint-boundary-control.pdf"
+               target="_blank">
+              Read PDF
+            </a>
+
+            <a href="Math-Physics-Notes/numerical-methods/adjoint-boundary-control.pdf"
+               download>
+              Download
+            </a>
+          </div>
+        </article>
+
+        <article class="note-card">
+          <h3>Streamfunction–Vorticity Formulation</h3>
+
+          <p>
+            Mathematical notes on the streamfunction-vorticity
+            representation, boundary conditions, and compatibility issues.
+          </p>
+
+          <div class="note-links">
+            <!-- Replace the path below with your real PDF path -->
+            <a class="button-link"
+               href="Math-Physics-Notes/fluid-mechanics/streamfunction-vorticity-notes.pdf"
+               target="_blank">
+              Read PDF
+            </a>
+
+            <a href="Math-Physics-Notes/fluid-mechanics/streamfunction-vorticity-notes.pdf"
+               download>
+              Download
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Current Topics</h2>
+
+      <div class="project-list">
+        <ul>
+          <li>Steady solutions of incompressible Navier–Stokes equations</li>
+          <li>Streamfunction-vorticity formulations in closed cavities</li>
+          <li>Adjoint-state methods and PDE-constrained optimisation</li>
+          <li>Numerical stability and convergence of iterative solvers</li>
+          <li>Reduced mathematical models for fluid mechanics</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Repository Structure</h2>
+
+      <p>
+        The downloadable material is maintained in the associated notes
+        repository. File paths in this webpage are relative paths, for example:
+      </p>
+
+      <p>
+        <code>
+          Math-Physics-Notes/numerical-methods/steady-navier-stokes-scheme.pdf
+        </code>
+      </p>
+
+      <p>
+        When you add a new PDF, place it in the appropriate folder and add a
+        corresponding card or link in this <code>index.html</code>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 RLIN175. Notes may be updated without notice.
+    </p>
+  </footer>
+
+</body>
+</html>
