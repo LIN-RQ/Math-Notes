@@ -198,6 +198,29 @@
       text-decoration: none;
     }
 
+    .license-box {
+      margin-top: 1rem;
+      padding: 1.2rem 1.25rem;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+      background: var(--surface);
+    }
+
+    .license-box h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.18rem;
+    }
+
+    .license-box p {
+      margin: 0.55rem 0;
+    }
+
+    .license-box ul {
+      margin: 0.65rem 0 0.35rem 1.25rem;
+      padding: 0;
+    }
+
     .small {
       color: var(--muted);
       font-family: Arial, sans-serif;
@@ -244,6 +267,7 @@
         <a href="#cfd">Computational Fluid Dynamics</a>
         <a href="#research-notes">Research Notes</a>
         <a href="#literature-notes">Literature Notes</a>
+        <a href="#license">License</a>
       </nav>
     </div>
   </header>
@@ -274,14 +298,47 @@
       <div id="literature-grid" class="grid"></div>
     </section>
 
-    <section>
-      <h2>Access and Reuse</h2>
+    <section id="license">
+      <h2>Access, Reuse, and Citation</h2>
 
       <p class="lead">
         These notes are working documents and may be corrected,
         expanded, or reorganised over time. Please consult each PDF
         for its scope, references, and current version.
       </p>
+
+      <div class="license-box">
+        <h3>Creative Commons Attribution 4.0 International</h3>
+
+        <p>
+          Unless otherwise stated, the original text, original figures,
+          original derivations, and original numerical material on this
+          website are licensed under
+          <a href="https://creativecommons.org/licenses/by/4.0/"
+             target="_blank" rel="license noopener">CC BY 4.0</a>.
+        </p>
+
+        <p>
+          You may copy, share, adapt, and build upon this material,
+          including for commercial purposes, provided that appropriate
+          attribution is given, a link to the licence is included, and
+          any changes are indicated.
+        </p>
+
+        <p>
+          For academic or public research use, please cite the relevant
+          note by giving the author, note title, version or access date,
+          and this website or the direct PDF link.
+        </p>
+
+        <p class="small">
+          Third-party papers, quotations, figures, datasets, and other
+          external material mentioned or reproduced in a note remain
+          subject to their own copyright and licence terms. This CC BY
+          licence covers only material for which the author holds the
+          relevant rights.
+        </p>
+      </div>
 
       <p class="small">
         The PDF links are relative paths, so they work both for a
